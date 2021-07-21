@@ -50,6 +50,9 @@ const App = () => {
           </table>
         </div>
       )}
+      <foot className='text-center fst-normal'>
+          <p className='text-light'>&copy; Vlad Somai</p>
+      </foot>
     </div>
   );
 };
