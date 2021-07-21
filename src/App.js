@@ -12,37 +12,29 @@ const App = () => {
           console.log(RandomPerson.name.first);
         }
         console.log("Random person fetched..");
+        window.scrollBy(0, 100);
       });
   };
 
-  const printAllPeople = () => {
-    for (let Person of People) {
-      console.log(Person.name.first);
-    }
-  };
-
   return (
-    <div className="container text-center">
-      <h1 className=" bg-secondary text-light rounded-3 m-5 pb-3 pt-3">
-        Random people
-      </h1>
-
-      <div className="d-flex justify-content-around">
-        <button className="btn btn-lg btn-success" onClick={fetchPerson}>
-          Add person
-        </button>
-        <button className="btn btn-lg btn-info" onClick={printAllPeople}>
-          Print all
-        </button>
+    <div className="container">
+      <div className="sticky-top pb-1 pt-1 text-center d-flex flex-column">
+        <h1 className="bg-secondary text-light rounded-pill mx-5 my-3 py-3">
+          Random people
+        </h1>
+        <div className="">
+          <button className="btn btn-lg btn-primary" onClick={fetchPerson}>
+            Add person
+          </button>
+        </div>
       </div>
-
       {Object.keys(People).length === 0 ? null : (
-        <table className="table table-striped table-hover mt-5">
+        <table className="table text-center table-striped table-hover mt-5 table-dark border-secondary table-bordered">
           <thead>
-            <tr>
-              <th>First name</th>
-              <th>Last name</th>
-              <th>Email</th>
+            <tr className='fs-2'>
+              <th className='bg-secondary'>First name</th>
+              <th className='bg-secondary'>Last name</th>
+              <th className='bg-secondary'>Email</th>
             </tr>
           </thead>
           <tbody>
