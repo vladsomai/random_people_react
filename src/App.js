@@ -18,8 +18,8 @@ const App = () => {
 
   return (
     <div className="container">
-      <div className="sticky-top pb-1 pt-1 text-center d-flex flex-column">
-        <h1 className="bg-secondary text-light rounded-pill mx-5 my-3 py-3">
+      <div className=" d-flex flex-column text-center">
+        <h1 className="bg-secondary text-light rounded-pill my-3 py-3">
           Random people
         </h1>
         <div className="">
@@ -29,24 +29,26 @@ const App = () => {
         </div>
       </div>
       {Object.keys(People).length === 0 ? null : (
-        <table className="table text-center table-striped table-hover mt-5 table-dark border-secondary table-bordered">
-          <thead>
-            <tr className='fs-2'>
-              <th className='bg-secondary'>First name</th>
-              <th className='bg-secondary'>Last name</th>
-              <th className='bg-secondary'>Email</th>
-            </tr>
-          </thead>
-          <tbody>
-            {People.map((Person) => (
-              <tr key={People.indexOf(Person)}>
-                <td>{Person.name.first}</td>
-                <td>{Person.name.last}</td>
-                <td>{Person.email}</td>
+        <div className="table-responsive">
+          <table className="table table-sm table-striped table-hover mt-5 table-dark border-secondary table-bordered text-center">
+            <thead>
+              <tr className="fs-5">
+                <th className="bg-secondary">First name</th>
+                <th className="bg-secondary">Last name</th>
+                <th className="bg-secondary">Email</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {People.map((Person) => (
+                <tr key={People.indexOf(Person)}>
+                  <td>{Person.name.first}</td>
+                  <td>{Person.name.last}</td>
+                  <td>{Person.email}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   );
