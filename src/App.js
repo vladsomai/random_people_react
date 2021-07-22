@@ -73,7 +73,6 @@ const App = () => {
       ) : (
         <p className="text-white"></p>
       )}
-
       <footer className="text-center">
         <p className="text-light">&copy; Vlad Somai</p>
       </footer>
