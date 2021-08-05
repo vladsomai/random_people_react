@@ -33,11 +33,12 @@ const App = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container ">
       <div className="sticky-top d-flex flex-column text-center">
-        <h1 className="bg-secondary text-light rounded-pill my-3 py-3">
-          Random people
-        </h1>
+        <div className="bg-secondary text-light rounded-pill my-3 py-3 d-flex justify-content-center">
+          <h1 className="animate__animated animate__slideInLeft">Random &nbsp;</h1>
+          <h1 className="animate__animated animate__slideInRight">people</h1>
+        </div>
         <div className="">
           <button className="btn btn-lg btn-primary" onClick={fetchPerson}>
             Add person
@@ -73,7 +74,7 @@ const App = () => {
       ) : (
         <p className="text-white"></p>
       )}
-      <footer className="text-center">
+      <footer className="text-center animate__animated animate__jackInTheBox">
         <p className="text-light">&copy; Vlad Somai</p>
       </footer>
     </div>
