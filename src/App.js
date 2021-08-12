@@ -8,11 +8,11 @@ const LoadingElement = (
     <div
       role="status"
       className="spinner-border mb-4"
-      style={{ width: "20rem", height: "20rem" }}
+      style={{ width: "10rem", height: "10rem" }}
     ></div>
 
     
-    <p className="display-3"><br></br>&nbsp;Loading..</p>
+    <p className="display-6"><br></br>&nbsp;Loading..</p>
   </div>
 );
 
@@ -61,7 +61,7 @@ class App extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        PageIsLoading: false,
+        PageIsLoading: true,
       });
     }, 500);
   }
