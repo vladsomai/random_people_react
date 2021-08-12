@@ -61,7 +61,7 @@ class App extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        PageIsLoading: true,
+        PageIsLoading: false,
       });
     }, 500);
   }
