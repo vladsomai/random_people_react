@@ -12,7 +12,7 @@ const LoadingElement = (
     ></div>
 
     
-    <p className="display-1"><br></br>&nbsp;Loading..</p>
+    <p className="display-3"><br></br>&nbsp;Loading..</p>
   </div>
 );
 
@@ -61,7 +61,7 @@ class App extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        PageIsLoading: true,
+        PageIsLoading: false,
       });
     }, 500);
   }
